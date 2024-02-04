@@ -1,21 +1,19 @@
 package com.ByCooper.AirCargoGo.model;
 
 import lombok.Builder;
+import lombok.Getter;
 
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-
+@Builder
+@Getter
 public class Flight {
 
     private final List<Segment> segments;
 
     public Flight(final List<Segment> segs) {
         segments = segs;
-    }
-
-    public List<Segment> getSegments() {
-        return segments;
     }
 
     @Override
